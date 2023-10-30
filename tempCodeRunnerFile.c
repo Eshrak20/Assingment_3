@@ -1,1 +1,1 @@
-var
+count_before_one(arr, n)
