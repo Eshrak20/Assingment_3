@@ -1,18 +1,41 @@
+
+
 #include <stdio.h>
 
 int main()
 {
     int input;
     scanf("%d", &input);
-    for (int i = 0; i <= input; i++)
+    int s = 1;
+    int gap = input - 2;
+    for (int i = 0; i <= (2 * input); i++)
     {
-        int y =  2 * i + 1;
-
-        for (int j = 0; j <= y; j++)
+        for (int j = gap; j >= 0; j--)
         {
-            printf("#");
+            printf(" ");
         }
-        // y = y + 2;
+
+        for (int j = 0; j < s; j++)
+        {
+            if (i % 2 == 0)
+            {
+                printf("#");
+            }
+            else
+            {
+                printf("-");
+            }
+        }
+        if (i <= input - 2)
+        {
+            s = s + 2;
+            gap--;
+        }
+        else
+        {
+            s = s - 2;
+            gap++;
+        }
 
         printf("\n");
     }
