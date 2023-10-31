@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-char is_palindrome(char *a, int sz)
+int is_palindrome(char *a, int sz)
 {
     int i = 0;
     int j = sz - 1;
@@ -32,14 +32,16 @@ int main()
     char a[1001];
     scanf("%s", a);
     int sz = strlen(a);
-    char res = is_palindrome(a, sz);
-    if (res == 0)
+    int res = is_palindrome(a, sz);
+    if (res == 1)
     {
-        printf("x");
+        printf("Palindrome");
+
     }
     else
     {
-        printf("Palindrome");
+        printf("Not Palindrome");
+
     }
 
     return 0;
